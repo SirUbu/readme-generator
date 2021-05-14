@@ -1,0 +1,1 @@
+Add and image of your application/project to this `images` directory to use it in your application/project README when generated.
