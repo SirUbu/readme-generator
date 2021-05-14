@@ -6,9 +6,17 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Sir Ubu",
   "license": "ISC",
   "dependencies": {
-    "inquirer": "^6.3.1"
-  }
+    "inquirer": "^6.5.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SirUbu/readme-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SirUbu/readme-generator/issues"
+  },
+  "homepage": "https://github.com/SirUbu/readme-generator#readme"
 }
