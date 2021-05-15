@@ -269,7 +269,7 @@ init()
         return writeToFile("README.MD", markdownResponse);
     })
     .then(writeFileResponse => {
-        console.log(writeFileResponse);
+        console.log(writeFileResponse.message);
     })
     .catch(err => {
         console.log(err);

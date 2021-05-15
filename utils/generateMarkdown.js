@@ -3,7 +3,9 @@ function renderTableChoices(contents) {
   if (contents.length > 0) {
     return `
       ${contents.map(title => {
-        return `* [${title.charAt(0).toUpperCase()}${title.slice(1)}](#${title})`
+        return `
+        * [${title.charAt(0).toUpperCase()}${title.slice(1)}](#${title})
+        `
       })
       .join('')}
     `
@@ -13,11 +15,10 @@ function renderTableChoices(contents) {
 // function that returns the table of contents section
 function renderTableOfContents(contents) {
   return `
-    ## Table of Contents
-
-      * [Usage](#usage)
-      * [Questions](#questions)
-      ${renderTableChoices(contents)}
+  ## Table of Contents
+  * [Usage](#usage)
+  * [Questions](#questions)
+  ${renderTableChoices(contents)}
   `;
 };
 
@@ -25,8 +26,8 @@ function renderTableOfContents(contents) {
 function renderInstallation(installation) {
   if (installation) {
     return `
-      ## Installation
-      ${installation}
+    ## Installation
+    ${installation}
     `
   } else return '';
 };
@@ -36,8 +37,7 @@ function renderScreenshot(confirmScreenshot, screenshot) {
   if (confirmScreenshot) {
     return `
     ### Screenshot
-
-      ![Project Screenshot](./assets/images/${screenshot})
+    ![Project Screenshot](./assets/images/${screenshot})
     `
   } else return '';
 };
@@ -47,8 +47,7 @@ function renderDeployedLink(confirmLink, link) {
   if (confirmLink) {
     return `
     ### Link
-
-      ${link}
+    ${link}
     `
   } else return '';
 };
@@ -58,8 +57,7 @@ function renderCreditsSection(credit) {
   if (credit) {
     return `
     ## Credits
-
-      ${credit}
+    ${credit}
     `
   } else return '';
 }
@@ -112,8 +110,7 @@ function renderLicenseSection(license) {
   if (license) {
     return `
     ## License
-
-      ${renderLicenseLink(license)}
+    ${renderLicenseLink(license)}
     `
   } else return '';
 };
@@ -122,9 +119,8 @@ function renderLicenseSection(license) {
 function renderFeaturesSection(features) {
   if (features) {
     return `
-      ## Features
-
-      ${features}
+    ## Features
+    ${features}
     `
   } else return '';
 };
@@ -135,15 +131,13 @@ function renderContributingSection(contributing, contributingInput) {
     return '';
   } else if (contributing) {
     return `
-      ## Contributing
-
-      ${contributingInput}
+    ## Contributing
+    ${contributingInput}
     `
   } else {
     return `
-      ## Contributing
-
-      [[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)]([![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md))
+    ## Contributing
+    [[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)]([![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md))
     `
   }
 };
@@ -152,9 +146,8 @@ function renderContributingSection(contributing, contributingInput) {
 function renderTestsSection(tests) {
   if(tests) {
     return `
-      ## Tests
-
-      ${tests}
+    ## Tests
+    ${tests}
     `
   } else return '';
 };
@@ -163,47 +156,22 @@ function renderTestsSection(tests) {
 function generateMarkdown(data) {
   return `
   # ${data.title}
-
   ## Description
-  
   ${data.description}
-
-
   ${renderTableOfContents(data.contents)}
-
-  
   ${renderInstallation(data.installation)}
-
-
   ## Usage
   ${data.usage}
   ${renderScreenshot(data.confirmScreenshot, data.screenshot)}
   ${renderDeployedLink(data.confirmLink, data.link)}
-
-
   ${renderCreditsSection(data.credit)}
-
-
   ${renderLicenseSection(data.license)}
-
-
   ${renderFeaturesSection(data.features)}
-
-
   ${renderContributingSection(data.contributing, data.contributingInput)}
-
-
   ${renderTestsSection(data.tests)}
-
-
   ## Questions
-
   For all questions regarding this project, feel free to contact me at:
-
-
   GitHub: [${data.questionsGithub}](https://github.com/${data.questionsGithub})
-
-
   Email: ${data.questionsEmail}
 `;
 };
