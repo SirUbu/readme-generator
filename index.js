@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -101,7 +102,7 @@ const questions = [
     {
         type: 'input',
         name: 'link',
-        message: 'Enter full deployed application link:',
+        message: 'Enter FULL deployed application link:',
         when: ({ confirmLink }) => {
             if (confirmLink) return true;
             else return false;
@@ -136,7 +137,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select the license for your project:',
-        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0'],
+        choices: ['GNU AGPLv3', 'GNU GPLv3', 'GNU LGPLv3', 'Mozilla Public License 2.0', 'Apache License 2.0', 'MIT License', 'Boost Software License 1.0'],
         loop: false,
         when: ({ contents }) => {
             if (contents.includes('license')) return true;
@@ -237,7 +238,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -248,6 +249,7 @@ function init() {
 init()
     .then(promptResponse => {
         console.log(promptResponse);
+        console.log(generateMarkdown(promptResponse));
     })
     .catch(err => {
         console.log(err);
