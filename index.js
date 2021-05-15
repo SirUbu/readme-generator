@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+const fs = require('fs');
 const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown');
 
@@ -238,7 +239,21 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {};
+function writeToFile(fileName, data) {
+    return new Promise((resolve, reject) => {
+        fs.writeFile(`./dist/${fileName}`, data, err => {
+            if (err) {
+                reject(err);
+                return;
+            }
+
+            resolve({
+                ok: true,
+                message: 'READEME file generated!'
+            });
+        });
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -248,8 +263,13 @@ function init() {
 // Function call to initialize app
 init()
     .then(promptResponse => {
-        console.log(promptResponse);
-        console.log(generateMarkdown(promptResponse));
+        return generateMarkdown(promptResponse);
+    })
+    .then(markdownResponse => {
+        return writeToFile("README.MD", markdownResponse);
+    })
+    .then(writeFileResponse => {
+        console.log(writeFileResponse);
     })
     .catch(err => {
         console.log(err);
