@@ -34,8 +34,7 @@ This is a `NODE` application: you must have a terminal interface and have node i
     
 
 ### Link
-A WALKTHROUGH VIDEO WILL BE ADDED HERE
-    
+[Video Walk Through](https://drive.google.com/file/d/15t1AMfUjkq-4NAb3FSfkyJ_TXBBkluEF/view)    
 
 ## Credits
 Third-Party Assets <br><br> node.js: https://nodejs.org/en/ <br> Inquirer.js: https://www.npmjs.com/package/inquirer <br>Initial Code: https://github.com/coding-boot-camp/potential-enigma <br><br> Resources <br><br> [Mastering Markdown](https://guides.github.com/features/mastering-markdown/) <br> [Code License](https://choosealicense.com/) <br> [Shields IO](https://shields.io/) <br> [Contributor Covenant](https://www.contributor-covenant.org/)
