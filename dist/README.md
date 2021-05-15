@@ -1,41 +1,44 @@
 
-# Tester Project
+# Final Test
 ## Description
-This is where I would enter a detailed description of this project or application. I'll be sure to simply my descriptions since I can't enter multiple lines anymore.
+This is where you would input the description of the project or application. You will use usage to describe how to use the app and you can have installation to describe how to install and features to outline any additional features.
 
 ## Table of Contents
 * [Usage](#usage)
 * [Questions](#questions)
 
       
-        * [Installation](#installation)
+* [Installation](#installation)
         
-        * [Credits](#credits)
+* [Credits](#credits)
         
-        * [License](#license)
+* [License](#license)
         
-        * [Features](#features)
+* [Features](#features)
         
-        * [Contributing](#contributing)
+* [Contributing](#contributing)
         
-        * [Tests](#tests)
+* [Tests](#tests)
         
     
   
 
 ## Installation
-This is where I would enter the required steps to install this application. This will be straightforward like: Step 1) clone repo locally. Step 2) open termial and navigate to repo. Step 3) in terminal, run `npm init`. Step 4) in terminal run `npm install`. Step 5) in terminal run `node index.js` and follow prompts. Finally, README.MD is generated in the `dist` directory.
+This is where you put specific instructions on how to install the application if there are any installation steps. This would include installation requirements such as node or to run npm init/install.
     
 ## Usage
-The use of this application is detailed here for the user to get an idea on how to USE this application or for what purpose they would use this application. You may also include steps on how to use the application here.
+This is where you outline how the user uses the application. This is required and designed to walk the user through the use process.
 
+### Screenshot
+![Project Screenshot](./assets/images/screenshot.PNG)
+    
 
 ### Link
 https://sirubu.github.io/taskinator/
     
 
 ## Credits
-List collaborators here: 
+This any resources and collaborators here. This is a bit ugly not as a list style; however, if I tell the user to use markdown test to create a list or breakpoints it might look better. <br> This should be on a new line. <br>- This should be a list item. <br> - This should be another list item.
     
 
 ## License
@@ -43,15 +46,15 @@ List collaborators here:
     
 
 ## Features
-This is where you would outline additional features to the user.
+This is where I can continue to add different features. In this case, I will test the markdown abilities: <br> 1. List Item 1 <br> 2. List Item 2 <br> ```this should be a box snip``` <br> `this should be block`
     
 
 ## Contributing
-[[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)]([![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md))
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
 
 ## Tests
-There are no tests but if there were you would list them here.
+Here are examples on how to run the app
     
 ## Questions
 For all questions regarding this project, feel free to contact me at:

@@ -4,7 +4,7 @@ function renderTableChoices(contents) {
     return `
       ${contents.map(title => {
         return `
-        * [${title.charAt(0).toUpperCase()}${title.slice(1)}](#${title})
+* [${title.charAt(0).toUpperCase()}${title.slice(1)}](#${title})
         `
       })
       .join('')}
@@ -135,7 +135,7 @@ ${contributingInput}
   } else if (contributing === false) {
     return `
 ## Contributing
-[[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)]([![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md))
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 `
   } else return '';
 };
